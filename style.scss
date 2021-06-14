@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$border: none;
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-image: url("images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+header {
+    border: $border;
+    text-align: center;
+    background-image: url("images/pattern-circles.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130px;
+    padding-top: 6vh;
+    padding-bottom: 8vh;
+    
+
+    h1 {
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: hsl(227, 35%, 25%);
+    }
+
+    p {
+        font-size: 0.8rem;
+        color: hsl(225, 20%, 60%);
+    }
+}
+
+main {
+    border: $border;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    padding-top: 6vh;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px grey;
+
+    .views {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5vh;
+
+        p {
+            color: hsl(225, 20%, 60%);
+            letter-spacing: 0.12rem;
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+        
+        h1 {
+            color: hsl(227, 35%, 25%);
+            font-size: 2.2rem;
+            display: flex;
+
+            .cost {
+                color: hsl(227, 35%, 25%);
+                font-size: 2.2rem;
+            }
+           
+            span {
+                color: hsl(225, 20%, 60%);
+                font-size: 0.9rem;
+                align-self: center;
+            }
+        }
+    }
+}
+
+.billing-info {
+    margin-top: 5vh;
+    border: $border;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+
+    .our-billing {
+        font-size: 0.9rem;
+        opacity: 0.7;
+        align-self: center;
+    }
+
+    .container {
+        width: 45px;
+        height: 25px;
+        border-radius: 50px;
+        align-self: center;
+        margin: 0 25px;
+        background-color: hsl(174, 86%, 45%);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 5px 3px;
+
+        &:hover {
+            background-color: cyan;
+        }
+
+        .circle {
+            background-color: white;
+            width: 18px;
+            height: 18px;
+            border-radius: 50px;
+            position: relative;
+            left: 0%;
+        }
+
+        .circle-left {
+            background-color: white;
+            width: 18px;
+            height: 18px;
+            border-radius: 50px;
+            position: relative;
+            left: 50%;
+        }
+    }
+
+    .bills {
+        font-size: 0.85rem;
+        width: 30%;
+        display: flex;
+        align-items: center;
+
+        .bill-span {
+           font-size: 0.7rem;
+           font-weight: 900;
+           align-self: center;
+           margin-left: 3%;
+           padding: 1px 6px;
+           border-radius: 5px;
+           color: hsl(15, 100%, 70%);
+           background-color:hsla(223, 50%, 87%, 0.3)
+        }
+    }
+}
+
+hr {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    opacity: 0.3;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6vh;
+
+    ul li {
+        list-style: none;
+        margin-left: 50%;
+        width: 100%;
+        color: black;
+        opacity: 0.7;
+        font-size: 0.8rem;
+        margin-top: 0.6vh;
+
+        img {
+            margin-right: 15px;
+        }
+    }
+
+    button {
+        margin-right: 12%;
+        border: 15px;
+        color: white;
+        background-color:hsl(227, 35%, 25%);
+        border: none;
+        border-radius: 15px;
+        padding: 10px 30px;
+        cursor: pointer;
+        transition-property: transform;
+        transition-duration: 1s;
+
+        &:hover {
+           background-color: hsla(227, 35%, 25%, 0.9);
+           transform: scale(1.2);
+        }
+    }
+}
+
+forms {
+    display: flex;
+    justify-content: center;
+}
+
+input[type = range] {
+    width: 73%;
+    margin: auto;
+    cursor: pointer;
+    height: 49px;
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 13px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: hsla(225, 20%, 60%, 0.3);
+    border-radius: 8px;
+    border: 0px solid #000000;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 10px 20px grey;
+    height: 36px;
+    width: 36px;
+    border-radius: 50px;
+    background: hsl(225, 20%, 60%);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+    background-image: url("images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: top 10px left 5px;
+  }
+
+  input[type=range]:focus::-webkit-slider-thumb {
+      cursor: -webkit-grabbing;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: hsla(225, 20%, 60%, 0.3);
+  }
+  
+  /* Styling for Mozilla */
+  input[type=range]::-moz-range-track {
+    height: 13px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: hsla(225, 20%, 60%, 0.3);
+    border-radius: 8px;
+    border: 0px solid #000000;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 10px 20px grey;
+    height: 36px;
+    width: 36px;
+    border-radius: 50px;
+    background: hsl(225, 20%, 60%);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+    background-image: url("images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: top 10px left 5px;
+  }
+
+  input[type=range]:focus::-moz-range-thumb {
+    cursor: -moz-grabbing;
+}
+
+input[type=range]:focus::-moz-range-track {
+  background: hsla(225, 20%, 60%, 0.3);
+}
+
+/* Styling for MS Edge */ 
+input[type=range]::-ms-track {
+    height: 13px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: hsla(225, 20%, 60%, 0.3);
+    border-radius: 8px;
+  }
+
+  input[type=range]::-ms-fill-lower {
+    background: hsla(225, 20%, 60%, 0.5);
+    border-radius: 16px;
+    box-shadow: 20px 0px 0px grey;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: hsla(225, 20%, 60%, 0.1);
+    border-radius: 16px;
+    box-shadow: 0px 0px 0px grey;
+  }
+
+  input[type=range]::-ms-thumb {
+    box-shadow: 0px 10px 20px grey;
+    height: 36px;
+    width: 36px;
+    border-radius: 50px;
+    background: hsl(225, 20%, 60%);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+    background-image: url("images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: top 10px left 5px;
+  }
+
+  input[type=range]:focus::-ms-thumb {
+      cursor: grab;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: hsla(225, 20%, 60%, 0.5);
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: hsla(225, 20%, 60%, 0.1);
+  }
+
+  
